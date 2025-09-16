@@ -1,2 +1,0 @@
-# ByteSquad
-School Project
