@@ -1,0 +1,226 @@
+.contact-section {
+    background-color: #9A9B94;
+    color: var(--background-color);
+    height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.contact-container {
+    background-color: var(--primary);
+    border-radius: 20px;
+    padding: 3rem;
+    width: 90%;
+    max-width: 800px;
+    animation: fadeIn 0.8s ease;
+    margin: 0 auto;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+}
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    animation: slideDown 0.6s ease;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+    animation: slideRight 0.6s ease;
+}
+
+.form-group {
+    flex: 1;
+    animation: fadeIn 0.8s ease;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: "Source Code Pro", monospace;
+    opacity: 0.9;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    color: var(--primary);
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--light);
+    background-color: var(--background-color);
+    box-shadow: 0 0 0 3px rgba(212, 214, 200, 0.3);
+}
+
+.message-group {
+    animation: slideUp 0.6s ease;
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: var(--background-color);
+    color: var(--primary);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeIn 1s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--light);
+    transform: translateY(-2px);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    animation: slideUp 0.8s ease;
+}
+
+.social-link {
+    color: var(--background-color);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--light);
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-section {
+        height: calc(100vh - 72px);
+        padding: 0;
+    }
+
+    .contact-container {
+        padding: 2rem;
+        width: 95%;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .contact-container::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .contact-container::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .contact-container::-webkit-scrollbar-thumb {
+        background-color: var(--light);
+        border-radius: 20px;
+    }
+
+    .contact-title {
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 0.5rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    textarea.form-control {
+        min-height: 120px;
+    }
+}
+
+@media (max-height: 700px) {
+    .contact-container {
+        padding: 1.5rem;
+    }
+
+    .contact-title {
+        margin-bottom: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 0.5rem;
+    }
+
+    textarea.form-control {
+        min-height: 100px;
+    }
+}

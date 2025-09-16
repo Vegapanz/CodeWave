@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/reset-css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caprasimo&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>ByteSquad</title>
+</head>
+<body>
+       <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg py-3">
+    <div class="container">
+      <a class="navbar-brand caprasimo-regular" href="home.html">ByteSquad.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end archivo-black" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " href="home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section with Carousel -->
+  <section class="about-section">
+    <h1 class="about-heading archivo-black">ABOUT US</h1>
+    
+    <div class="carousel-container">
+      <div class="carousel-content">
+        <!-- Text Content -->
+        <div class="carousel-text">
+          <h2 class="archivo-black">Our Mission</h2>
+          <p class="source-code-pro">
+            Empowering innovation through technology, we strive to create digital solutions that transform businesses and enhance user experiences. Our mission is to deliver excellence in every line of code we write.
+          </p>
+        </div>
+        
+        <!-- Image Content -->
+        <div class="carousel-image">
+          <img src="image/laptop.png" alt="Server Icon" />
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="carousel-nav">
+        <button class="nav-button btn" onclick="previousSlide()">
+          <i class="bi bi-arrow-left-circle-fill"></i>
+        </button>
+        <button class="nav-button btn" onclick="nextSlide()">
+          <i class="bi bi-arrow-right-circle-fill"></i>
+        </button>
+      </div>
+
+      <!-- Slide Indicators -->
+      <div class="carousel-indicators">
+        <button class="indicator active" onclick="goToSlide(0)" aria-label="Mission"></button>
+        <button class="indicator" onclick="goToSlide(1)" aria-label="Vision"></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="who-are-we" class="py-5">
+    <div class="container text-center">
+      <h2 class="archivo-black mb-4">WHO ARE WE?</h2>
+      <!-- Add your "Who Are We?" content here -->
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="/js/about.js"></script>
+</body>
+</html> 
