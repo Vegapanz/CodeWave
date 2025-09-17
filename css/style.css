@@ -1,8 +1,8 @@
 :root{
-  --primary: #52524E;
-  --secondary: #9A9B94;
-  --light: #D4D6C8;
-  --background-color: #E9E9E5;  
+  --primary: #52524E !important;
+  --secondary: #9A9B94 !important;
+  --light: #D4D6C8 !important;
+  --background-color: #E9E9E5 !important;  
 }
 
 body{
@@ -46,14 +46,15 @@ body{
 }
 
 .text-section h1 {
-  font-size: 3rem;
+  font-size: 4.5rem;
   line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .text-section p {
-  font-size: 1rem;
-  max-width: 500px;
+  font-size: 1.25rem;
+  max-width: 600px;
+  line-height: 1.6;
 }
 
 /* Image Section */
@@ -62,11 +63,12 @@ body{
   position: relative;
 }
 
-
-
 .image-section img {
   position: relative;
   z-index: 1;
+  width: 110%;
+  max-width: 110%;
+  transform: scale(1.1);
 }
 
 
@@ -79,10 +81,11 @@ body{
     flex-direction: row;
   }
   .text-section h1 {
-    font-size: 3rem;
+    font-size: 4.5rem;
   }
   .image-section img {
-    max-width: 100%;
+    width: 110%;
+    max-width: 110%;
   }
 }
 
@@ -91,19 +94,19 @@ body{
   .section-container {
     height: auto;
     min-height: 80vh;
-    padding: 2rem 1rem;
+    padding: 3rem 1.5rem;
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 2rem;
   }
   .text-section {
-    padding: 1rem;
+    padding: 1.5rem;
   }
   .text-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
   }
   .text-section p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     max-width: 90%;
   }
@@ -113,7 +116,8 @@ body{
     justify-content: center;
   }
   .image-section img {
-    max-width: 90%;
+    width: 100%;
+    max-width: 100%;
     height: auto;
     object-fit: contain;
   }
@@ -141,54 +145,30 @@ body{
 @media (max-width: 767.98px) {
   .section-container {
     height: auto;
-    padding: 1rem;
+    padding: 2rem 1rem;
     flex-direction: column;
   }
   .text-section {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     padding: 0 1rem;
   }
   .text-section h1 {
-    font-size: 2rem;
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
   }
   .text-section p {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     max-width: 100%;
+    line-height: 1.6;
   }
   .image-section {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   .image-section img {
-    max-width: 90%;
+    width: 95%;
+    max-width: 95%;
     margin: 0 auto;
-  }
-  .nav-link {
-    text-align: center;
-    margin-left: 0;
-    padding: 0.75rem 1rem;
-    width: 100%;
-    display: block;
-  }
-  .nav-link::after {
-    bottom: 0.5rem;
-    width: 0;
-    left: 10%;
-    right: 10%;
-  }
-  .nav-link:hover::after,
-  .nav-link.active::after {
-    width: 80%;
-    left: 10%;
-  }
-  .navbar-nav {
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-  .navbar-collapse {
-    background-color: var(--background-color);
-    padding: 0.5rem;
-    border-radius: 0.25rem;
   }
 }

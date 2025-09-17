@@ -9,7 +9,7 @@ const carouselData = [
     {
         title: "Our Vision",
         description: "To be at the forefront of technological advancement, creating solutions that not only meet today's needs but anticipate tomorrow's challenges, while fostering a culture of innovation and excellence.",
-        image: "image/server.png",
+        image: "image/server1080.png",
         label: "Vision"
     }
 ];
