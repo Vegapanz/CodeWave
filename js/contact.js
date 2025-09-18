@@ -3,17 +3,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const inputs = document.querySelectorAll('.form-control');
 
     // Add floating label effect
-    inputs.forEach(input => {
-        input.addEventListener('focus', function() {
-            this.parentElement.classList.add('focused');
-        });
+    // inputs.forEach(input => {
+    //     input.addEventListener('focus', function() {
+    //         this.parentElement.classList.add('focused');
+    //     });
 
-        input.addEventListener('blur', function() {
-            if (!this.value) {
-                this.parentElement.classList.remove('focused');
-            }
-        });
-    });
+    //     input.addEventListener('blur', function() {
+    //         if (!this.value) {
+    //             this.parentElement.classList.remove('focused');
+    //         }
+    //     });
+    // });
 
     // Form validation and submission
     form.addEventListener('submit', function(e) {
