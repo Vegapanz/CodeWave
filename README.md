@@ -12,7 +12,7 @@ Here's a glimpse of the CodeWave landing page.
 
 | Home Page | About Page | Contact Page |
 | :---: | :---: | :---: |
-| ![Homepage](image/Homepage.jpg) | ![Aboutpage](image/Aboutpage.jpg) | ![Contactpage](image/Contactpage.png) |
+| ![Homepage](image/Homepage.png) | ![Aboutpage](image/Aboutpage.png) | ![Contactpage](image/Contactpage.png) |
 
 ***
 
