@@ -350,7 +350,7 @@
 }
 
 .team-member:nth-child(even) {
-    margin-left: auto;
+    margin-left: 40%;
     flex-direction: row-reverse;
 }
 
