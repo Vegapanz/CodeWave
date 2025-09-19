@@ -54,11 +54,11 @@ To run this project locally, follow these simple steps:
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/your-username/your-repository-name.git](https://github.com/your-username/your-repository-name.git)
+    git clone https://github.com/Vegapanz/CodeWave
     ```
 2.  **Navigate to the project directory:**
     ```sh
-    cd your-repository-name
+    cd CodeWave
     ```
 3.  **Open `index.html` in your browser:**
     * You can simply double-click the `index.html` file, or right-click and choose "Open with" your preferred browser.
