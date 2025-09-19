@@ -60,58 +60,45 @@
 
             <!-- Form -->
             <div class="form-wrapper">
-            <form id="contactForm" class="contact-form source-code-pro " action="https://api.web3forms.com/submit" method="POST">
-              <div class="form-row">
-                <div class="form-group">
-                  <input type="hidden" name="access_key" value="31e33a22-d18f-4773-afd6-7ac2a6c36cf4">
-                  <label class="form-label">First Name</label>
-                  <input type="text" class="form-control" name="first-name" placeholder="Kiko" required>
-                    
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Last Name</label>
-                  <input type="text" class="form-control" name="last-name" placeholder="Smith" required>
-                </div>
-              </div>
+      <form id="contactForm" class="contact-form source-code-pro" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="31e33a22-d18f-4773-afd6-7ac2a6c36cf4">
 
-              <div class="form-group">
-                <label class="form-label" >Email</label>
-                <input type="email" id="emailInput" class="form-control" name="email" placeholder="example@gmail.com" required>
-                  <div class="invalid-feedback">
-                      Please enter a valid email address.
-                  </div>
-              </div>
-
-              <div class="form-group message-group">
-                <label class="form-label">Message</label>
-                <textarea class="form-control" rows="5" name="message" placeholder="What do you have in mind?"></textarea>
-              </div>
-
-              <button type="submit" class="submit-btn archivo-black">Submit</button>
-            </form>
-
-            <div class="social-links">
-          <a href="#" class="social-link" title="GitHub">
-            <i class="bi bi-github"></i>
-          </a>
-          <a href="#" class="social-link" title="Facebook">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="#" class="social-link" title="Instagram">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="#" class="social-link" title="Phone">
-            <i class="bi bi-telephone"></i>
-          </a>
-          <a href="#" class="social-link" title="Email">
-            <i class="bi bi-envelope"></i>
-          </a>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="first-name" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Kiko">
+                <div class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="last-name" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="last-name" name="last-name" placeholder="Smith">
+                <div class="error-message"></div>
+            </div>
         </div>
-      </div>
+
+        <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com">
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group message-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" rows="5" id="message" name="message" placeholder="What do you have in mind?"></textarea>
+            <div class="error-message"></div>
+        </div>
+        
+        <div id="form-result" class="form-result"></div>
+
+        <button type="submit" class="submit-btn archivo-black">Submit</button>
+    </form>
+
+    <div class="social-links">
+        </div>
+</div>
     </div>
   </section>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script src="js/contact.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html> 
-
