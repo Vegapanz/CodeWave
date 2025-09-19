@@ -32,21 +32,11 @@ This project was built using core web technologies:
 
 * **HTML5:** For the structure and content of the web pages.
 * **CSS3:** For all styling, layout, and responsiveness.
+* **Bootstrap:** CSS Framework.
 * **JavaScript (Optional):** Can be used to power interactive elements like the services carousel and form validation.
 
 ***
 
-## 👥 Our Team
-
-This project was brought to life by the talented members of CodeWave:
-
-* **John Patrick Monroyo** - Developer / Founder
-* **Nicole Panganiban** - UI/UX Designer
-* **Trexcy Ann** - Web Developer
-* **Jade Rolf Orense** - Quality Assurance
-* **Dandymar Orbiso** - Project Manager
-
-***
 
 ## 🏁 Getting Started
 
