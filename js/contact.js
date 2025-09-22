@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // --- 1. Form Validation ---
         let isValid = true;
+
+        clearErrors();
+
+ 
         
         // Clear previous invalid states
         inputs.forEach(input => input.classList.remove('is-invalid'));
@@ -33,6 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 input.classList.add('is-invalid');
             }
         });
+
+        if (!validateForm()) {
+            return; // Stop if validation fails
+        }
 
         if (isValid) {
             // --- 2. Change Button to Loading State ---
@@ -92,4 +100,59 @@ document.addEventListener('DOMContentLoaded', function() {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(email);
     }
+
+    function validateForm() {
+        let isValid = true;
+        const firstName = document.getElementById('first-name');
+        const lastName = document.getElementById('last-name');
+        const email = document.getElementById('email');
+        const message = document.getElementById('message');
+
+        // Check First Name
+        if (firstName.value.trim() === '') {
+            showError(firstName, 'First name is required.');
+            isValid = false;
+        }
+
+        // Check Last Name
+        if (lastName.value.trim() === '') {
+            showError(lastName, 'Last name is required.');
+            isValid = false;
+        }
+
+        // Check Email
+        if (email.value.trim() === '') {
+            showError(email, 'Email is required.');
+            isValid = false;
+        } else if (!isValidEmail(email.value)) {
+            showError(email, 'Please enter a valid email address.');
+            isValid = false;
+        }
+
+        // Check Message
+        if (message.value.trim() === '') {
+            showError(message, 'Message cannot be empty.');
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    function showError(inputElement, message) {
+        const formGroup = inputElement.parentElement;
+        const errorDiv = formGroup.querySelector('.error-message');
+        
+        inputElement.classList.add('error');
+        errorDiv.textContent = message;
+    }
+
+    function clearErrors() {
+        const errorMessages = document.querySelectorAll('.error-message');
+        errorMessages.forEach(div => div.textContent = '');
+
+        const errorInputs = document.querySelectorAll('.form-control.error');
+        errorInputs.forEach(input => input.classList.remove('error'));
+    }
 });
+
+

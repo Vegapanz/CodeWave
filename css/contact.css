@@ -139,6 +139,10 @@ textarea.form-control {
     transform: translateY(-3px);
 }
 
+.error-message {
+    color: #ff4757;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
