@@ -6,7 +6,7 @@ A clean and modern multi-page landing site for **CodeWave.**, a fictional web de
 
 ***
 
-## 📸 Screenshots
+## 📸 Draft Design
 
 Here's a glimpse of the CodeWave landing page.
 
