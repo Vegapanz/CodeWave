@@ -1,4 +1,4 @@
-// Carousel data
+
 const carouselData = [
     {
         title: "Our Mission",
@@ -20,23 +20,23 @@ function updateCarousel(direction) {
     const textContent = document.querySelector('.carousel-text');
     const iconContainer = document.querySelector('.carousel-image');
     
-    // Add fade-out class
+    
     textContent.style.opacity = '0';
     iconContainer.style.opacity = '0';
     
-    // Update indicators
+   
     document.querySelectorAll('.indicator').forEach((indicator, index) => {
         indicator.classList.toggle('active', index === currentSlide);
     });
     
     setTimeout(() => {
-        // Update content
+        
         const slide = carouselData[currentSlide];
         textContent.querySelector('h2').textContent = slide.title;
         textContent.querySelector('p').textContent = slide.description;
         iconContainer.innerHTML = `<img src="${slide.image}" alt="${slide.title}" />`;
         
-        // Add fade-in class
+       
         textContent.style.opacity = '1';
         iconContainer.style.opacity = '1';
     }, 300);
@@ -52,7 +52,7 @@ function previousSlide() {
     updateCarousel('prev');
 }
 
-// Add transition effects when the page loads
+
 document.addEventListener('DOMContentLoaded', () => {
     const textContent = document.querySelector('.carousel-text');
     const iconContainer = document.querySelector('.carousel-image');
@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     iconContainer.style.transition = 'opacity 0.3s ease';
     slideLabel.style.transition = 'opacity 0.3s ease';
     
-    // Initialize first slide
+   
     updateCarousel();
+
 });
