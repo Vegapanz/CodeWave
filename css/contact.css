@@ -143,7 +143,7 @@ textarea.form-control {
     color: #ff4757;
 }
 
-/* Animations */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -186,7 +186,7 @@ textarea.form-control {
     }
 }
 
-/* Responsive Styles */
+
 @media (max-width: 992px) {
     .container-content {
         grid-template-columns: 1fr;
@@ -255,4 +255,5 @@ textarea.form-control {
     textarea.form-control {
         min-height: 100px;
     }
+
 }
