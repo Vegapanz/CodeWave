@@ -1,3 +1,59 @@
+
+@keyframes slideInDown {
+    from {
+        transform: translate(-50%, -100px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 .about-section {
     background-color: var(--primary);
     color: var(--background-color);
@@ -12,7 +68,10 @@
     position: absolute;
     top: 2rem;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(0);
+    animation: slideInDown 0.8s ease-out forwards;
+    text-align: center;
+    width: 100%;
 }
 
 .carousel-container {
@@ -39,12 +98,23 @@
 
 .carousel-text {
     flex: 1;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-text.fade-out {
+    opacity: 0;
+}
+
+.carousel-text.fade-in {
+    opacity: 1;
 }
 
 .carousel-text h2 {
     font-size: 4rem;
     margin-bottom: 2rem;
     color: var(--background-color);
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .carousel-text p {
@@ -52,6 +122,7 @@
     line-height: 1.8;
     color: var(--background-color);
     max-width: 600px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .carousel-image {
@@ -62,6 +133,8 @@
     height: 400px;
     max-width: 45%;
     position: relative;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
 .carousel-image img {
@@ -183,7 +256,7 @@
     outline: none;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 1200px) {
     .carousel-text h2 {
         font-size: 3.5rem;
@@ -315,7 +388,6 @@
     }
 }
 
-/* Team Section Styles */
 .team-section {
     padding: 4rem 0;
     background-color: var(--background-color);
@@ -326,6 +398,13 @@
     font-size: 3rem;
     margin-bottom: 3rem;
     color: var(--primary);
+    text-align: center;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .team-grid {
@@ -345,7 +424,9 @@
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-    animation: fadeIn 0.8s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     max-width: 800px;
 }
 
@@ -417,7 +498,7 @@
     transform: translateY(-2px);
 }
 
-/* Footer Styles */
+
 .footer {
     background-color: #4a4a4a;
     color: white;
@@ -536,7 +617,7 @@
 
 
 
-/* Team Section Responsive Styles */
+
 @media (max-width: 992px) {
     .team-member {
         margin-left: 0 !important;
@@ -596,11 +677,7 @@
 
 
 
-/* Footer Responsive Styles */
 
-/* Large Desktop (1200px and up) - Default styles already applied */
-
-/* Desktop (992px to 1199px) */
 @media (max-width: 1199px) {
     .footer-content {
         padding: 0 3rem;
@@ -612,7 +689,7 @@
     }
 }
 
-/* Tablet/iPad Landscape (768px to 991px) */
+
 @media (max-width: 991px) {
     .footer {
         padding: 2rem 0 1rem 0;
@@ -649,7 +726,7 @@
     }
 }
 
-/* Tablet/iPad Portrait (481px to 767px) */
+
 @media (max-width: 767px) {
     .footer {
         padding: 1.5rem 0 1rem 0;
@@ -702,7 +779,7 @@
     }
 }
 
-/* Mobile Landscape (481px to 640px) */
+
 @media (max-width: 640px) {
     .footer-content {
         gap: 1.5rem;
@@ -728,7 +805,7 @@
     }
 }
 
-/* Mobile Portrait (320px to 480px) */
+
 @media (max-width: 480px) {
     .footer {
         padding: 1.25rem 0 0.75rem 0;
@@ -795,7 +872,7 @@
     }
 }
 
-/* Extra Small Mobile (up to 319px) */
+
 @media (max-width: 319px) {
     .footer-content {
         padding: 0 0.75rem;
